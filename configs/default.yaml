@@ -1,0 +1,51 @@
+universe:
+  source: data/universe/current.csv
+  historical_source: data/universe/membership.csv
+
+strategy:
+  rsi_period: 14
+  monthly_long_min: 45
+  monthly_long_max: 75
+  weekly_long_min: 55
+  weekly_long_max: 80
+  daily_long_min: 25
+  daily_long_max: 50
+  monthly_short_max: 55
+  monthly_short_min: 20
+  weekly_short_max: 45
+  weekly_short_min: 20
+  daily_short_min: 50
+  daily_short_max: 75
+  breakout_lookback: 5
+  volume_lookback: 20
+  volume_ratio: 1.2
+  regime_ma: 50
+  target1_pct: 0.015
+  target2_min_pct: 0.03
+  target2_max_pct: 0.04
+  max_daily_rsi_long: 70
+  min_daily_rsi_short: 30
+
+risk:
+  risk_per_trade: 0.01
+  max_portfolio_risk: 0.04
+  max_positions: 5
+  max_sector_positions: 2
+  capital_scenarios: [1000000, 2500000, 5000000, 10000000]
+
+execution:
+  model: next_open
+  slippage_bps: 10
+  commission_bps: 0
+  brokerage_per_order: 0
+  stt_bps: 0
+  exchange_bps: 0
+  gst_bps: 0
+  stamp_bps: 0
+  sebi_bps: 0
+
+validation:
+  train_years: 10
+  validation_years: 2
+  test_years: 2
+  min_trades: 30

@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gfs-nifty50"
+version = "2.0.0"
+description = "GFS NIFTY 50 constituent stock research and backtesting engine"
+requires-python = ">=3.10"
+dependencies = ["pandas>=2.2", "numpy>=1.26", "PyYAML>=6.0"]
+
+[project.scripts]
+gfs-nifty50 = "gfs_nifty50.cli:main"
